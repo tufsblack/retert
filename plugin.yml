@@ -1,0 +1,41 @@
+name: BeneluxPvP
+version: '1.0.0'
+main: nl.beneluxpvp.BeneluxPvP
+api-version: '26.1'
+description: 'Benelux PvP HQ: kits, arena''s met automatisch herstel, wachtrij, duels, statistieken, ranglijst en cosmetics-beloningen.'
+softdepend: [Cosmetics]
+commands:
+  pvp:
+    description: 'Het PvP-hoofdmenu, wachtrij en gevechten'
+    usage: '/pvp [queue|leave|accept|deny|stats|top|spectate|rewards]'
+    aliases: [bpvp]
+  duel:
+    description: 'Daag een speler uit voor een duel'
+    usage: '/duel <speler> [kit] [arena]'
+    aliases: [uitdagen]
+  pvpstats:
+    description: 'Bekijk je statistieken of die van een speler'
+    usage: '/pvpstats [speler]'
+    aliases: [stats, kd]
+  pvptop:
+    description: 'De ranglijst: kills, deaths, K/D en reeksen'
+    usage: '/pvptop [kills|deaths|kd|streak]'
+    aliases: [ranglijst, leaderboard, lb]
+  kills:
+    description: 'Bekijk je kills en wat je kunt ontgrendelen'
+    usage: '/kills [speler]'
+    aliases: [killbeloningen, ku, beloningen]
+  pvpadmin:
+    description: 'Staff: kits, arena''s, beloningen, statistieken en instellingen'
+    usage: '/pvpadmin [gui|status|reload|lobby|eis|zet|reset]'
+    aliases: [pa, bpa]
+permissions:
+  beneluxpvp.use:
+    description: 'Mag meedoen aan PvP en de menu''s openen'
+    default: true
+  beneluxpvp.admin:
+    description: 'Staff-menu en /pvpadmin'
+    default: op
+  beneluxpvp.bypass:
+    description: 'Mag tijdens een gevecht alle commando''s gebruiken en in arena''s bouwen'
+    default: op

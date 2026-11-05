@@ -1,0 +1,66 @@
+# ============================================================
+#  Benelux PvP HQ - instellingen
+#  Veel van deze waarden kan staff ook in het menu aanpassen
+#  (/pvpadmin gui > Instellingen). Wat in het menu is ingesteld
+#  staat in staff.yml en wint van dit bestand.
+# ============================================================
+
+# ---- Gevecht ----
+wedstrijd:
+  aftellen: 5              # seconden stilstaan voor het begin
+  einde-vertraging: 3      # seconden wachten na het einde voordat iedereen teruggaat
+  max-seconden: 600        # maximale duur, daarna gelijkspel (0 = geen limiet)
+
+# ---- Wachtrij en uitdagen ----
+wachtrij:
+  aan: true
+  max-seconden: 600        # zo lang mag iemand wachten (0 = onbeperkt)
+uitdagen:
+  aan: true
+  verloopt-seconden: 60
+kijken:
+  aan: true
+
+# ---- Statistieken en farmen ----
+ranglijst:
+  min-wedstrijden: 5       # zo veel wedstrijden nodig voor de K/D-ranglijst
+tellen:
+  aan: true
+  zelfde-ip-telt-niet: true
+  zelfde-slachtoffer-seconden: 300   # dezelfde tegenstander binnen deze tijd telt niet (0 = uit)
+  max-per-uur: 30                    # meer winsten per uur tellen niet (0 = uit)
+  speler-min-online-seconden: 0      # tegenstander die net online kwam telt niet (0 = uit)
+  speler-na-dood-seconden: 0         # tegenstander die net verloor telt niet (0 = uit)
+
+# ---- Commando's tijdens een gevecht of bij het kijken ----
+# Alleen deze commando's werken dan (zonder "/"). Staff met beneluxpvp.bypass mag alles.
+commando:
+  toegestaan:
+    - pvp
+
+# ---- Arena herstel ----
+vertraging-ticks: 40                  # wachttijd na een gevecht voor het herstel begint (20 ticks = 1 seconde)
+max-wachten-op-spelers-ticks: 600     # zolang er spelers in de arena staan wachten we maximaal zo lang
+ms-per-tick: 20                       # maximaal aantal milliseconden werk per tick (hoger = sneller herstel, meer lag)
+max-blokken: 3000000                  # maximale grootte van een arena in blokken
+verwijder-entiteiten:                 # dit wordt na een gevecht uit de arena verwijderd
+  - ARROW
+  - SPECTRAL_ARROW
+  - TRIDENT
+  - ITEM
+  - EXPERIENCE_ORB
+  - ENDER_PEARL
+  - SNOWBALL
+  - EGG
+  - AREA_EFFECT_CLOUD
+  - FIREBALL
+  - SMALL_FIREBALL
+  - WIND_CHARGE
+  - TNT
+  - POTION
+
+# ---- Berichten (MiniMessage) ----
+berichten:
+  ontgrendeld-chat: "<green>Ontgrendeld! <gray>Je kreeg <white>%cosmetic%<gray> voor <gold>%kills% overwinningen<gray>. Open <white>/cosmetics<gray> om hem te dragen."
+  ontgrendeld-titel: "<dark_red>⚔ <gold><bold>ONTGRENDELD <dark_red>⚔"
+  ontgrendeld-ondertitel: "<white>%cosmetic%"
